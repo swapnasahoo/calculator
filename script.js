@@ -42,10 +42,12 @@ document.body.addEventListener('keydown', (e) => {
   }
 });
 
-document.querySelector('.dark-theme-toggle').addEventListener('click', () => {
+document.querySelector('.theme-toggle').addEventListener('click', () => {
   if (document.body.classList.contains('light-theme')) {
     document.body.classList.remove('light-theme');
+    document.querySelector('.theme-toggle').innerHTML = '☀️';
   } else {
     document.body.classList.add('light-theme');
+    document.querySelector('.theme-toggle').innerHTML = '🌙';
   }
 });
