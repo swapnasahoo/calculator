@@ -12,6 +12,16 @@
   --calc-display-bg-color: #faf4d3;
 }
 
+.light-theme {
+  --background-color: #faf4d3;
+  --surface-background-color: #fff9e6;
+  --text-color: #2a2a2a;
+  --equal-background-color: #f4c27d;
+  --key-background-color: #e5d9b5;
+  --key-accent-bg-color: rgba(229, 217, 181, 0.7);
+  --calc-display-bg-color: #fffdf0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,9 +32,11 @@ body {
   color: var(--text-color);
   box-sizing: border-box;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  overflow-y: hidden;
+  transition: 300ms all ease-in-out;
 }
 
-header {
+section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,6 +53,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-shadow: 4px 4px black;
 }
 
 .calculator-btn {
@@ -81,6 +94,27 @@ header {
   color: black;
 }
 
+nav ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+.dark-theme-toggle {
+  position: absolute;
+  left: 85%;
+  top: 2%;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 16px;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: 300ms all ease-in-out;
+}
+
+.dark-theme-toggle:hover {
+  scale: 1.1;
+}
+
 @media (max-width: 430px) {
   .calculator-container {
     height: 500px;
@@ -93,5 +127,12 @@ header {
   .calculation-display {
     padding: 8px 10px;
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .dark-theme-toggle {
+    left: 75%;
+    top: 2%;
   }
 }

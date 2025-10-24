@@ -41,3 +41,11 @@ document.body.addEventListener('keydown', (e) => {
     calculationDisplay.value = calculation;
   }
 });
+
+document.querySelector('.dark-theme-toggle').addEventListener('click', () => {
+  if (document.body.classList.contains('light-theme')) {
+    document.body.classList.remove('light-theme');
+  } else {
+    document.body.classList.add('light-theme');
+  }
+});
