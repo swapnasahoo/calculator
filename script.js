@@ -15,6 +15,7 @@ button.forEach((buttonElement) => {
       calculationDisplay.value = calculation;
     } else {
       calculation += e.target.innerHTML;
+      localStorage.setItem('calculation', calculation);
       calculationDisplay.value = calculation;
     }
   });
@@ -34,7 +35,10 @@ document.body.addEventListener('keydown', (e) => {
   } else if (e.key === 'Backspace') {
     calculation = calculation.slice(0, -1);
     calculationDisplay.value = calculation;
-  } else {
+  } else if (e.key >= '0' && e.key <= 9) {
+    calculation += e.key;
+    calculationDisplay.value = calculation;
+  } else if (['+', '-', '*', '/', '%'].includes(e.key)) {
     calculation += e.key;
     calculationDisplay.value = calculation;
   }
