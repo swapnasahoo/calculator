@@ -13,13 +13,13 @@
 }
 
 .light-theme {
-  --background-color: #faf4d3;
-  --surface-background-color: #fff9e6;
-  --text-color: #2a2a2a;
-  --equal-background-color: #f4c27d;
-  --key-background-color: #e5d9b5;
-  --key-accent-bg-color: rgba(229, 217, 181, 0.7);
-  --calc-display-bg-color: #fffdf0;
+  --background-color: #f5f7fa;
+  --surface-background-color: #afb3f7;
+  --text-color: #171a21;
+  --equal-background-color: #509ced;
+  --key-background-color: #d7e3f4;
+  --key-accent-bg-color: #7a93ac;
+  --calc-display-bg-color: #ffffff;
 }
 
 * {
