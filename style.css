@@ -55,7 +55,6 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 0 0 6px 2px var(--box-shadow-color);
 }
 
 .calculator-btn {
